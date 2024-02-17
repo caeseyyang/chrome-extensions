@@ -1,0 +1,28 @@
+{
+  "name": "Note",
+  "description": "Note V1.0",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "shiba.png",
+    "default_title": ""
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content/content-script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
